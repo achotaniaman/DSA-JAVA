@@ -1,0 +1,36 @@
+
+// Q24 — Majority Element
+
+// Given an array, find the element that appears more than n/2 times, where n is the array length.
+
+// int[] arr = {2, 2, 1, 1, 1, 2, 2};
+
+// Expected output:
+
+// Majority element = 2
+// Your task
+
+// Find the majority element.
+public class array_24 {
+    public static void main(String[] args) {
+
+        int[] arr = {2, 2, 1, 1, 1, 2, 2};
+
+        for (int i = 0; i < arr.length; i++) {
+
+            int count = 0;
+
+            for (int j = 0; j < arr.length; j++) {
+
+                if (arr[i] == arr[j]) {
+                    count++;
+                }
+            }
+
+            if (count > arr.length / 2) {
+                System.out.println("Majority element = " + arr[i]);
+                break;
+            }
+        }
+    }
+}
